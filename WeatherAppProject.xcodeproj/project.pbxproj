@@ -56,8 +56,7 @@
 		4E11F8832D0B84A7002F954E /* WeatherAppProject */ = {
 			isa = PBXGroup;
 			children = (
-				4E11F8842D0B84A7002F954E /* AppDelegate.swift */,
-				4E11F8862D0B84A7002F954E /* SceneDelegate.swift */,
+				4E11F8982D0B84D3002F954E /* Aplication */,
 				4E11F8882D0B84A7002F954E /* ViewController.swift */,
 				4E11F88A2D0B84A7002F954E /* Main.storyboard */,
 				4E11F88D2D0B84A8002F954E /* Assets.xcassets */,
@@ -65,6 +64,15 @@
 				4E11F8922D0B84A8002F954E /* Info.plist */,
 			);
 			path = WeatherAppProject;
+			sourceTree = "<group>";
+		};
+		4E11F8982D0B84D3002F954E /* Aplication */ = {
+			isa = PBXGroup;
+			children = (
+				4E11F8842D0B84A7002F954E /* AppDelegate.swift */,
+				4E11F8862D0B84A7002F954E /* SceneDelegate.swift */,
+			);
+			path = Aplication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
