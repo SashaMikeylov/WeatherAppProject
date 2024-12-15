@@ -14,12 +14,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
+        
         let window = UIWindow(windowScene: scene)
-        let viewController = ViewController()
+        
+        let tabBarController = UITabBarController()
+        tabBarController.tabBar.backgroundColor = .systemGray4
+        
+        let weatherViewController = WeatherViewController()
+        
+        weatherViewController.tabBarItem = UITabBarItem(title: "Weather", image: UIImage(systemName: "cloud.sun.fill"), tag: 0)
+                                                        
+        let citiesViewController = CitiesWeatherListViewController()
+        citiesViewController.tabBarItem = UITabBarItem(title: "Cities", image: UIImage(systemName: "globe.central.south.asia.fill"), tag: 1)
+        
+        
+        
+        let controllers = [weatherViewController, citiesViewController]
+        
+        tabBarController.viewControllers = controllers.map {
+            UINavigationController(rootViewController: $0)
+        }
         
         self.window = window
         window.makeKeyAndVisible()
-        window.rootViewController = viewController
+        window.rootViewController = tabBarController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
