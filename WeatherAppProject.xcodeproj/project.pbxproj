@@ -22,6 +22,10 @@
 		4E11F8AF2D0F5493002F954E /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F8AE2D0F5493002F954E /* DataFetcher.swift */; };
 		4E11F8B12D0F552A002F954E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F8B02D0F552A002F954E /* LocationManager.swift */; };
 		4E11F8B32D0F5556002F954E /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F8B22D0F5556002F954E /* StorageManager.swift */; };
+		4E11F8B52D0F560E002F954E /* UIview + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F8B42D0F560E002F954E /* UIview + Extension.swift */; };
+		4E11F8B72D0F5632002F954E /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F8B62D0F5632002F954E /* UIImageView + Extension.swift */; };
+		4E11F8B92D0F5650002F954E /* Double + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F8B82D0F5650002F954E /* Double + Extension.swift */; };
+		4E11F8BB2D0F568D002F954E /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E11F8BA2D0F568D002F954E /* String + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,10 @@
 		4E11F8AE2D0F5493002F954E /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 		4E11F8B02D0F552A002F954E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		4E11F8B22D0F5556002F954E /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		4E11F8B42D0F560E002F954E /* UIview + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIview + Extension.swift"; sourceTree = "<group>"; };
+		4E11F8B62D0F5632002F954E /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
+		4E11F8B82D0F5650002F954E /* Double + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double + Extension.swift"; sourceTree = "<group>"; };
+		4E11F8BA2D0F568D002F954E /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 		4E11F8992D0B8553002F954E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4E11F8B42D0F560E002F954E /* UIview + Extension.swift */,
+				4E11F8B62D0F5632002F954E /* UIImageView + Extension.swift */,
+				4E11F8B82D0F5650002F954E /* Double + Extension.swift */,
+				4E11F8BA2D0F568D002F954E /* String + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -231,12 +243,16 @@
 			files = (
 				4E11F8892D0B84A7002F954E /* WeatherViewController.swift in Sources */,
 				4E11F8AD2D0F541C002F954E /* NetworkFetcher.swift in Sources */,
+				4E11F8BB2D0F568D002F954E /* String + Extension.swift in Sources */,
+				4E11F8B72D0F5632002F954E /* UIImageView + Extension.swift in Sources */,
 				4E11F8A92D0F5385002F954E /* APIService.swift in Sources */,
 				4E11F8B32D0F5556002F954E /* StorageManager.swift in Sources */,
 				4E11F8B12D0F552A002F954E /* LocationManager.swift in Sources */,
 				4E11F8AB2D0F53E4002F954E /* NetworkService.swift in Sources */,
 				4E11F89F2D0F0E85002F954E /* CitiesViewController.swift in Sources */,
 				4E11F8AF2D0F5493002F954E /* DataFetcher.swift in Sources */,
+				4E11F8B52D0F560E002F954E /* UIview + Extension.swift in Sources */,
+				4E11F8B92D0F5650002F954E /* Double + Extension.swift in Sources */,
 				4E11F8A72D0F5320002F954E /* CityModel.swift in Sources */,
 				4E11F8852D0B84A7002F954E /* AppDelegate.swift in Sources */,
 				4E11F8872D0B84A7002F954E /* SceneDelegate.swift in Sources */,
