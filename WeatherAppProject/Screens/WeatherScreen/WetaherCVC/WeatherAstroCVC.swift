@@ -13,7 +13,7 @@ final class WeatherAstroCollectionViewCell: UICollectionViewCell {
     
     private let imageView: UIImageView = {
         let imageV = UIImageView()
-        imageV.tintColor = .label
+        imageV.tintColor = .white
         
         imageV.translatesAutoresizingMaskIntoConstraints = false
         return imageV
@@ -21,15 +21,15 @@ final class WeatherAstroCollectionViewCell: UICollectionViewCell {
     
     private let astroLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 26, weight: .black)
-        
+        label.font = UIFont.systemFont(ofSize: 26, weight: .semibold)
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .secondarySystemBackground
+        self.backgroundColor = .newBlueColor2
         self.layer.cornerRadius = 8
         
         contentView.addSubviews(imageView, astroLabel)

@@ -16,7 +16,7 @@ final class DailyWeatherCollectionViewCell: UICollectionViewCell {
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        label.textColor = .label
+        label.textColor = .white
         return label
     }()
     private let conditionImage: UIImageView = {
@@ -28,14 +28,14 @@ final class DailyWeatherCollectionViewCell: UICollectionViewCell {
     private let tempLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 30, weight: .black)
-        label.textColor = .label
+        label.textColor = .white
         return label
     }()
     
     private let conditionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 13, weight: .medium)
-        label.textColor = .label
+        label.textColor = .white
         return label
     }()
     
@@ -49,7 +49,7 @@ final class DailyWeatherCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupCell() {
-        self.backgroundColor = .secondarySystemBackground
+        self.backgroundColor = .newBlueColor2
         self.layer.cornerRadius = 8
     }
     

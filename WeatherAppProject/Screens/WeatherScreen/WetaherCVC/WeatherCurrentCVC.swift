@@ -12,10 +12,13 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
     static let cellIdentifier = "CurrentWeatherCollectionViewCell"
     
     //MARK: - UI
+    
+    
+    
     private let countryLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 22, weight: .black)
-        label.textColor = .label
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -24,7 +27,7 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
     private let regionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 22, weight: .medium)
-        label.textColor = .label
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -32,14 +35,14 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
     private let dateLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
-        label.textColor = .label
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
     }()
     private let conditionImage: UIImageView = {
         let imgView = UIImageView()
-        imgView.tintColor = .label
+        imgView.tintColor = .white
         imgView.translatesAutoresizingMaskIntoConstraints = false
 
         return imgView
@@ -48,7 +51,7 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
     private let tempLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 30, weight: .black)
-        label.textColor = .label
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -57,7 +60,7 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
     private let conditionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
-        label.textColor = .label
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -66,7 +69,7 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
     private let feelsLikeTempCLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 22, weight: .black)
-        label.textColor = .label
+        label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
 
         return label
@@ -76,7 +79,7 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = .secondarySystemBackground
+        self.backgroundColor = .clear
         setupCell()
         addViews()
         setUpConstraints()
@@ -110,7 +113,7 @@ final class CurrentWeatherCollectionViewCell: UICollectionViewCell {
             regionLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -12),
             
             conditionImage.topAnchor.constraint(equalTo: regionLabel.bottomAnchor, constant: 20),
-            conditionImage.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 12),
+            conditionImage.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: -20),
             conditionImage.widthAnchor.constraint(equalToConstant: 120),
             conditionImage.heightAnchor.constraint(equalToConstant: 120),
             

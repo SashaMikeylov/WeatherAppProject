@@ -21,6 +21,15 @@ final class WeatherViewController: UIViewController {
         return label
     }()
     
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "phon")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.clipsToBounds = true
+        
+        return imageView
+    }()
+    
     //MARK: - VARIABLES
     private let viewModel = WeatherViewViewModel()
     private var cityName: String = ""
@@ -47,7 +56,7 @@ final class WeatherViewController: UIViewController {
     //MARK: - VIEW DIDLOAD
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = .newBlueColor
         collectionView = createCollectionView()
         setupNavigationBar()
         addSubviews()
@@ -58,20 +67,28 @@ final class WeatherViewController: UIViewController {
     
     //MARK: - FUNCTIONS
     private func setupNavigationBar() {
-        title = "Weather"
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font: UIFont.systemFont(ofSize: 22, weight: .black),
             NSAttributedString.Key.foregroundColor: UIColor.label
         ]
+        navigationController?.navigationBar.isHidden = true
+        
     }
     
     private func addSubviews() {
+        view.addSubview(imageView)
         view.addSubview(collectionView)
     }
     
     private func addConstraints() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
+            
+            imageView.topAnchor.constraint(equalTo: view.topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
             collectionView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
@@ -84,6 +101,7 @@ final class WeatherViewController: UIViewController {
             return self.createSection(for: sectionIndex)
         }
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.backgroundColor = .clear
         collectionView.showsVerticalScrollIndicator = false
         collectionView.register(CurrentWeatherCollectionViewCell.self, forCellWithReuseIdentifier: CurrentWeatherCollectionViewCell.cellIdentifier)
         collectionView.register(HourlyWeatherCollectionViewCell.self, forCellWithReuseIdentifier: HourlyWeatherCollectionViewCell.cellIdentifier)

@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: scene)
         
         let tabBarController = UITabBarController()
-        tabBarController.tabBar.backgroundColor = .systemGray4
-        
+        tabBarController.tabBar.backgroundColor = .newBlueColor
+        tabBarController.tabBar.selectedImageTintColor = .white
+        tabBarController.tabBar.unselectedItemTintColor = .systemGray4
         let weatherViewController = WeatherViewController(cityName: "")
         
         weatherViewController.tabBarItem = UITabBarItem(title: "Weather", image: UIImage(systemName: "cloud.sun.fill"), tag: 0)

@@ -51,7 +51,7 @@ final class WeatherAstroCollectionViewCellViewModel {
         case .humidity:
             return UIColor.systemBlue
         case .wind:
-            return UIColor.darkGray
+            return UIColor.white
         }
     }
     

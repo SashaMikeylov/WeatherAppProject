@@ -14,21 +14,21 @@ final class HourlyWeatherCollectionViewCell: UICollectionViewCell {
     private let tempLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .black)
-        label.textColor = .label
+        label.textColor = .white
         label.textAlignment = .center
         return label
     }()
     private let hourLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 14, weight: .black)
-        label.textColor = .label
+        label.textColor = .white
         label.textAlignment = .center
         return label
     }()
     
     private let iconImage: UIImageView = {
         let image = UIImageView()
-        image.tintColor = .label
+        image.tintColor = .white
         return image
     }()
     
@@ -49,7 +49,7 @@ final class HourlyWeatherCollectionViewCell: UICollectionViewCell {
     }
     
     private func setupCell() {
-        self.backgroundColor = .secondarySystemBackground
+        self.backgroundColor = .newBlueColor2
         self.layer.cornerRadius = 8
     }
     
