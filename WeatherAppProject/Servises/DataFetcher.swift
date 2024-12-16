@@ -7,7 +7,7 @@
 
 import Foundation
 
-class DataFetcherService {
+final class DataFetcherService {
     
     var networkDataFetcher: DataFetcher
     

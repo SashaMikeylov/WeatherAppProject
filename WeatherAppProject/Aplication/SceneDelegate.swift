@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = .systemGray4
         
-        let weatherViewController = WeatherViewController()
+        let weatherViewController = WeatherViewController(cityName: "")
         
         weatherViewController.tabBarItem = UITabBarItem(title: "Weather", image: UIImage(systemName: "cloud.sun.fill"), tag: 0)
                                                         
@@ -34,7 +34,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         tabBarController.viewControllers = controllers.map {
             UINavigationController(rootViewController: $0)
         }
-        
+       
         self.window = window
         window.makeKeyAndVisible()
         window.rootViewController = tabBarController

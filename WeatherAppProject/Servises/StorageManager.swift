@@ -7,7 +7,7 @@
 
 import Foundation
 
-class StorageManager {
+final class StorageManager {
     static let shared = StorageManager()
     
     private let citiesKey: String = "cities"
